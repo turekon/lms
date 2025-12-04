@@ -1,0 +1,5 @@
+environment       = "pruebas"
+do_token          = "dop_v1_......"
+spaces_access_key = "access key"
+spaces_secret_key = "secret key"
+region            = "nyc3"

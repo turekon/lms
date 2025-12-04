@@ -1,0 +1,23 @@
+# Archivos de estado de Terraform. Contienen información sensible de la infraestructura.
+*.tfstate
+*.tfstate.*
+
+# Directorios locales de Terraform que contienen los proveedores y módulos descargados.
+.terraform/
+
+# Archivo de bloqueo de versiones de proveedores.
+.terraform.lock.hcl
+
+# Archivos de variables. A menudo contienen secretos como tokens de API, contraseñas, etc.
+# Es una buena práctica usar variables de entorno o un sistema de gestión de secretos.
+*.tfvars
+*.tfvars.json
+
+# Archivos de "override". Se usan para sobreescribir configuraciones localmente y no deberían ser compartidos.
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Archivos de log de errores.
+crash.log
