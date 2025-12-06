@@ -68,10 +68,10 @@ resource "digitalocean_vpc" "mvp_network" {
 # 4. Servidor LMS (Droplet)
 # Un LMS puede consumir bastante RAM. Se selecciona 8GB RAM para estabilidad.
 resource "digitalocean_droplet" "lms_node" {
-  image    = "ubuntu-24-04-x64"
+  image    = "fedora-42-x64"
   name     = "srv-${var.project_name}-${var.environment}"
   region   = var.region
-  size     = "s-4vcpu-8gb" # Slug actualizado. El plan básico más cercano a 8GB RAM.
+  size     = "s-4vcpu-8gb" 
   vpc_uuid = digitalocean_vpc.mvp_network.id
   backups  = true
   ssh_keys = [data.digitalocean_ssh_key.mi_llave.id]  
